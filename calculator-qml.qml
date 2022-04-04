@@ -26,7 +26,10 @@ Window {
         anchors.right: parent.right
         anchors.top: parent.top
         height: parent.height * 3 / 8 - 10
-
+        gradient: Gradient{
+        GradientStop{position: 0.0; color:"white"}
+        GradientStop{position: 0.60; color: "black"}
+        }
 
 
         Text {
@@ -39,7 +42,7 @@ Window {
             anchors.leftMargin: -34
             anchors.topMargin: -35
             text: "0"
-            color: "black"
+            color: "white"
             font.pixelSize: window.height * 3 / 32
             font.family: "Open Sans Regular"
             fontSizeMode: Text.Fit
@@ -72,7 +75,10 @@ Window {
                 x: index * width
                 width: parent.width / 4
                 height: parent.height / 5
-
+                gradient: Gradient{
+                GradientStop{position: 0.0; color:"white"}
+                GradientStop{position: 0.60; color: "black"}
+                }
 
 
                 text: modelData
@@ -100,7 +106,10 @@ Window {
                 y: Math.floor(index / 3 + 1) * height
                 width: parent.width / 4
                 height: parent.height / 5
-
+                gradient: Gradient{
+                GradientStop{position: 0.0; color:"white"}
+                GradientStop{position: 0.60; color: "black"}
+                }
 
                 text: modelData
                 onClicked: statemachine.submitEvent(eventName)
@@ -128,7 +137,10 @@ Window {
             text: "="
 
             onClicked: statemachine.submitEvent("EQUALS")
-
+            gradient: Gradient{
+            GradientStop{position: 0.0; color:"white"}
+            GradientStop{position: 0.60; color: "black"}
+            }
             }
         }
 }

@@ -55,7 +55,7 @@ Rectangle {
 
     signal clicked
     property alias text: text.text
-    border.width: 9
+   // border.width: 9
     border.color: "white"
 
     property real textHeight: height - 2
@@ -73,7 +73,7 @@ Rectangle {
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignVCenter
         font.pixelSize: height * fontHeight
-        color: "black"
+        color: "white"
         font.family: "Open Sans Regular"
 
 
