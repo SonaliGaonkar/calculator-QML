@@ -55,13 +55,14 @@ Rectangle {
 
     signal clicked
     property alias text: text.text
-   // border.width: 9
-    border.color: "white"
+    border.width: 9
+    border.color: "#7e7e7e"
 
     property real textHeight: height - 2
     property real fontHeight: 0.4
     property bool pressed: mouse.pressed
     property real implicitMargin: (width - text.implicitWidth) / 2
+    radius: 60
 
 
     Text {
@@ -74,6 +75,7 @@ Rectangle {
         verticalAlignment: Text.AlignVCenter
         font.pixelSize: height * fontHeight
         color: "white"
+        font.bold:true
         font.family: "Open Sans Regular"
 
 

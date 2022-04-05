@@ -9,7 +9,7 @@ Window {
     height: 500
     width: 500
     visible: true
-    color: "#ffffff"
+    color: "#7e7e7e"
 
     CalculatorStateMachine {
         id: statemachine
@@ -26,6 +26,9 @@ Window {
         anchors.right: parent.right
         anchors.top: parent.top
         height: parent.height * 3 / 8 - 10
+        border.color: "#7e7e7e"
+        border.width: 9
+        radius:50
         gradient: Gradient{
         GradientStop{position: 0.0; color:"white"}
         GradientStop{position: 0.60; color: "black"}
@@ -75,6 +78,7 @@ Window {
                 x: index * width
                 width: parent.width / 4
                 height: parent.height / 5
+
                 gradient: Gradient{
                 GradientStop{position: 0.0; color:"white"}
                 GradientStop{position: 0.60; color: "black"}
@@ -106,6 +110,7 @@ Window {
                 y: Math.floor(index / 3 + 1) * height
                 width: parent.width / 4
                 height: parent.height / 5
+
                 gradient: Gradient{
                 GradientStop{position: 0.0; color:"white"}
                 GradientStop{position: 0.60; color: "black"}
@@ -137,9 +142,10 @@ Window {
             text: "="
 
             onClicked: statemachine.submitEvent("EQUALS")
+
             gradient: Gradient{
             GradientStop{position: 0.0; color:"white"}
-            GradientStop{position: 0.60; color: "black"}
+            GradientStop{position: 0.2; color: "black"}
             }
             }
         }
