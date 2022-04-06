@@ -2,14 +2,15 @@ import CalculatorStateMachine 1.0
 import QtQuick 2.5
 import QtQuick.Window 2.0
 import QtScxml 5.8
-//import QtGraphicalEffects 1.12
+import QtQuick.Controls 2.1
+import QtGraphicalEffects 1.12
 
 Window {
     id: window
-    height: 500
-    width: 500
+    height: 640
+    width: 600
     visible: true
-    color: "#7e7e7e"
+    color: "#969696"
 
     CalculatorStateMachine {
         id: statemachine
@@ -26,7 +27,7 @@ Window {
         anchors.right: parent.right
         anchors.top: parent.top
         height: parent.height * 3 / 8 - 10
-        border.color: "#7e7e7e"
+        border.color: "#969696"
         border.width: 9
         radius:50
         gradient: Gradient{
@@ -59,7 +60,6 @@ Window {
         anchors.left: parent.left
         anchors.right: parent.right
         anchors.bottom: parent.bottom
-
 
         property real implicitMargin: {
             var ret = 0;
@@ -128,6 +128,7 @@ Window {
             }
         }
 
+
         Button {
             id: resultButton
             x: 3 * width
@@ -138,10 +139,12 @@ Window {
             width: parent.width / 4
             height: y * 4
 
-
             text: "="
 
-            onClicked: statemachine.submitEvent("EQUALS")
+
+
+            onClicked: statemachine.submitEvent ("EQUALS" )
+
 
             gradient: Gradient{
             GradientStop{position: 0.0; color:"white"}
@@ -150,7 +153,6 @@ Window {
             }
         }
 }
-
 
 
 
