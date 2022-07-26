@@ -3,7 +3,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 
-#include "statemachine.h"
+//#include "statemachine.h"
 
 int main(int argc, char *argv[])
 {
@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
                                             "CalculatorStateMachine");
 
     QQmlApplicationEngine engine;
-    engine.load(QUrl(QStringLiteral("qrc:/calculator-qml.qml")));
+    engine.load(QUrl(QStringLiteral("qrc:/calculator-qml.qrc")));
     if (engine.rootObjects().isEmpty())
         return -1;
 
