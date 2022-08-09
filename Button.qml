@@ -14,39 +14,29 @@ Rectangle {
 
     property real textHeight: height - 2
     property real fontHeight: 0.4
-    property bool pressed: mouse.pressed
-    property real implicitMargin: (width - text.implicitWidth) / 2
     radius: 60
 
 
-
     Text {
-        id: text
-        anchors.left: parent.left
-        anchors.right: parent.right
-        anchors.top: parent.top
-        height: parent.textHeight
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
-        font.pixelSize: height * fontHeight
+            id: text
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.top: parent.top
+            height: parent.textHeight
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
+            font.pixelSize: height * fontHeight
 
-        font.bold:true
-        font.family: "Open Sans Regular"
-       color : mouseArea.pressed ? "black" : "white"
+            font.bold:true
+            font.family: "Open Sans Regular"
+           color : mouseArea.pressed ? "black" : "white"
 
-    }
-
-
-
-    MouseArea {
-        id: mouseArea
-        anchors.fill: parent
+        }    MouseArea {
+              id: mouseArea
+              anchors.fill: parent
 
 
-        onClicked: button.clicked()
+              onClicked: button.clicked()
 
-    }
-    }
-
-
-
+          }
+          }
