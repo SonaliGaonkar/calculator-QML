@@ -35,7 +35,6 @@ Window {
         GradientStop{position: 0.60; color: "black"}
         }
 
-
         Text {
             id: resultText
             anchors.fill: parent
@@ -50,7 +49,6 @@ Window {
             font.pixelSize: window.height * 3 / 32
             font.family: "Open Sans Regular"
             fontSizeMode: Text.Fit
-
         }
     }
 
@@ -78,16 +76,10 @@ Window {
                 x: index * width
                 width: parent.width / 4
                 height: parent.height / 5
-
                 gradient: Gradient{
                 GradientStop{position: 0.0; color:"white"}
-                GradientStop{position: 0.60; color: "black"}
-                }
-
-
+                GradientStop{position: 0.60; color: "black"} }
                 text: modelData
-
-
                 fontHeight: 0.4
 
                 onClicked: statemachine.submitEvent(eventName)
@@ -110,12 +102,10 @@ Window {
                 y: Math.floor(index / 3 + 1) * height
                 width: parent.width / 4
                 height: parent.height / 5
-
                 gradient: Gradient{
                 GradientStop{position: 0.0; color:"white"}
                 GradientStop{position: 0.60; color: "black"}
                 }
-
                 text: modelData
                 onClicked: statemachine.submitEvent(eventName)
                 property string eventName: {
@@ -128,24 +118,16 @@ Window {
             }
         }
 
-
         Button {
             id: resultButton
             x: 3 * width
             y: parent.height / 5
-
             textHeight: y - 2
             fontHeight: 0.4
             width: parent.width / 4
             height: y * 4
-
             text: "="
-
-
-
             onClicked: statemachine.submitEvent ("EQUALS" )
-
-
             gradient: Gradient{
             GradientStop{position: 0.0; color:"white"}
             GradientStop{position: 0.2; color: "black"}
@@ -153,13 +135,3 @@ Window {
             }
         }
 }
-
-
-
-
-
-/*##^##
-Designer {
-    D{i:0;formeditorZoom:3}D{i:1}D{i:4}D{i:3}D{i:7}D{i:6}D{i:9}D{i:8}D{i:10}D{i:5}
-}
-##^##*/
